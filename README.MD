@@ -5,7 +5,10 @@ He finds himself on a mysterious island, with a threatening tsunami approaching,
 
 You need to help him build a computer to contact a rescue team and get out in 15 minutes.<br><br>
 
-  
+
+### How to run the file
+To run the python file, you can simply just write `py 'the lost goat.py'` on Windows, or `'python3 the lost goat.py'`.
+
 
 #### How to play
 
