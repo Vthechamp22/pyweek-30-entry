@@ -7,7 +7,10 @@ You need to help him build a computer to contact a rescue team and get out in 15
 
 
 ### How to run the file
-To run the python file, you can simply just write `py 'the lost goat.py'` on Windows, or `'python3 the lost goat.py'`.
+simply create a `venv` using the command `py -m venv venv` on Windows or `python3 -m venv venv` on Mac or Linux
+then, do `venv\Scrips\activate` on windows or `source venv\bin\activate` on Mac or Linux
+then, install the requirements using `py -m pip install -r requirements.txt` on windows or `python3 -m pip install -r requirements.txt` on mac or linux
+To run the python file, you can simply just write `py 'run_game.py'` on Windows, or `'python3 run_game.py'` on Mac or Linux.
 
 
 #### How to play
