@@ -6,9 +6,7 @@ from pygame import image
 from pygame import display
 from pygame import transform
 from pygame import K_RETURN, KEYDOWN
-from pygame import mouse
 from pygame import mixer
-from pygame.constants import MOUSEBUTTONDOWN
 from pygame.time import Clock
 import pygame.gfxdraw
 from pygame_textinput import TextInput
@@ -42,7 +40,7 @@ default_font = font.Font(join(
 big_font = font.Font(join(
     "assets", "fonts", "Noto_Sans_JP", "NotoSansJp-Medium.otf"), 50)
 question_font = font.Font(join("assets", "fonts", "Noto_Sans_JP", "NotoSansJp-Medium.otf"),
-                          20)
+                          25)
 timer_font = font.Font(join(
     "assets", "fonts", "Roboto", "Roboto-Medium.ttf"), 40)
 story_font = font.Font(join("assets", "fonts", "Special_Elite",
@@ -228,7 +226,7 @@ class CommunicationDot(BlinkingDot):
     def __init__(self) -> None:
         self.x = 680
         self.y = 733
-        self.color = [255, 255, 0]
+        self.color = [0, 255, 0]
         self.r = 10
         self.add_color = True
 
@@ -240,14 +238,18 @@ class CommunicationDot(BlinkingDot):
                                      self.r, self.color)
         if self.add_color:
             self.color[2] += 8
+            self.color[0] += 8
         else:
             self.color[2] -= 8
+            self.color[0] -= 8
 
         if self.color[2] > 255:
             self.add_color = False
             self.color[2] = 255
+            self.color[0] = 255
         elif self.color[2] < 0:
             self.color[2] = 0
+            self.color[0] = 0
             self.add_color = True
 
         return self.clicked()
